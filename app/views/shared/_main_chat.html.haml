@@ -1,0 +1,41 @@
+.main-wrapper
+  .main-wrapper__main-top
+    .main-wrapper__main-top__left-box
+      %p.group-name #チャンネル名
+      %p.member-name メンバー名
+    .main-wrapper__main-top__right-box
+      =link_to "#" do
+        %i.fas.fa-edit
+          Edit
+
+    
+  .main-wrapper__main-middle
+    .main-wrapper__main-middle__messages
+      .main-wrapper__main-middle__messages__member
+        .main-wrapper__main-middle__messages__member__name
+          %p.name name
+        .main-wrapper__main-middle__messages__member__date
+          %p.date 2020/3/20
+      .main-wrapper__main-middle__messages__messaage
+        %p.message  aaaaaaa
+    
+  .main-wrapper__main-bottom
+    .main-wrapper__main-bottom__submit-wrapper
+      .main-wrapper__main-bottom__submit-wrapper__left
+        =form_for "#" do |f|
+          =f.text_area :content, placeholder: 'Type a message', size: '80 X 80', class:"placeholder"
+        %label{class: "input-box"}
+          %i.fas.fa-camera
+            %input{type: "file"}
+      
+       
+          
+        
+
+      .main-wrapper__main-bottom__submit-wrapper__right
+        = link_to "#" do
+          %p.submit Send
+      
+          
+      
+    
