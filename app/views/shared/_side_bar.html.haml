@@ -6,10 +6,11 @@
         %p.title OSAKA_TECH::EXPERT
     .side-wrapper__side-top__inner-box
       .side-wrapper__side-top__inner-box__right
-        =link_to "#" do
-          %i.fas.fa-user-edit
+        =link_to edit_user_path(current_user) do
+          = icon('fas', 'cog', class: 'icon')
       .side-wrapper__side-top__inner-box__left
-        %p.username yuyaosada
+        %p.username 
+          = current_user.name
 
   .side-wrapper__side-bottom
     .side-wrapper__side-bottom__title
